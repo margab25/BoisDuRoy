@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Montserrat, Verdana, Tahoma, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    color: #4B5564;
+}
+
+/*
+    Gestion de la page d'accueil
+*/
+
+.contain-homePage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.img-area{
+    position: right;
+}
+
+.img-area .fondu{
+    position: absolute;
+    z-index: 1;
+    height: 99vh;
+}
+
+.img-area .img-homepage{
+    z-index: 2;
+    height: 99vh;
+}
+
+.contain-homePage .login-homePage{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    position: relative;
+    left: 20%;
+    z-index: 2;
+}
+
+.login-homePage h2{
+    font-size: 30px;
+}
+
+.login-homePage p{
+    padding: 25px 0;
+    font-size: 15px;
+    font-weight: 300;
+    width: 85%;
+    line-height: 20px;
+}
+
+.login-homePage a{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    background-color: #23C4B3;
+    width: 20%;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.login-homePage a h4{
+    color: white;
+    font-weight: 200;
+    font-size: 14px;
+    padding: 8px 0;
+}
+
+.login-homePage a:hover{
+    transform:translateX(10px);
+}
+
+/*
+    Gestion de la page de connexion
+*/
+
+.group{ 
+    position:relative; 
+    margin-bottom:45px; 
+  }
+
+  input{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+
+  input:focus{ outline:none; }
+  
+  label{
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+
+  .date-label{
+    left:5px;
+    top:-20px;
+  }
+  
+  input:focus ~ label, input:valid ~ label{
+    top:-20px;
+    font-size:14px;
+    color:#23C4B3;
+  }
+  
+  .bar{ position:relative; display:block; width:300px; }
+
+  .bar:before, .bar:after{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#23C4B3; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+
+  .bar:before {
+    left:50%;
+  }
+
+  .bar:after {
+    right:50%; 
+  }
+  
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  @-webkit-keyframes inputHighlighter {
+    from { background:#23C4B3; }
+    to  { width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+    from { background:#23C4B3; }
+    to  { width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+    from { background:#23C4B3; }
+    to  { width:0; background:transparent; }
+  }
+
+.form-login{
+    position: relative;
+    left: 25%;
+}
+
+.btn-login{
+    background-color: white;
+    color: #4B5564;
+    content: '\00bb';
+    border:1px solid #757575;
+    transition: .6s ease-in-out;
+    
+}
+
+.btn-login:hover{
+    color: white;
+    background-color: #23C4B3;
+    border: none;
+}
+
+/*
+  gestion de la navBar
+*/
+
+.navBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navBar ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navBar ul li{
+  margin: 0 30px;
+  font-size: 14px;
+  font-weight: 300;
+  transition: .3s ease-in-out;
+}
+
+.navBar img{
+  position: relative;
+  right: 10%;
+}
+
+.logout{
+  position: relative;
+  left: 10%;
+  background-color: #23C4B3;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  transition: .3s ease-in-out;
+}
+
+.navBar a:hover{
+  transform: translateY(-5px);
+}
+
+.navBar ul li:hover{
+  transform: translateY(-5px);
+}
+
+/*
+  Gestion de la page de demande de congé
+*/
+
+.demande-form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.demande-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demande-button button{
+  margin: 0 40px;
+  width: 120px;
+  height: 30px;
+  background-color: #23C4B3;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: .3s ease-in-out;
+}
+
+.demande-button button:hover{
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.erreur-demande{
+  color: red;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.succes-demande{
+  color: darkgreen;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+/*
+  gestion de la page des informations
+*/
+
+.contain-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+
+.info-label{
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-right: 10px;
+}
+
+.info-pers{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  font-size: 20px;
+  padding-bottom: 10vh;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  margin: 20px;
+}
+
+.contain-info h3{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.info-pers p{
+  margin: 10px 0;
+}
+
+.conge{
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  margin-top: 10vh;
+  flex-wrap: wrap;
+
+}
+
+.sub-conge{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+
+.sub-conge p{
+  margin: 10px 0;
+}
+
+/*
+  Gestion de la page changer mdp
+*/
+
+.new-mdp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.new-mdp p{
+  margin-top: 10%;
+}
+
+.new-mdp span{
+  font-weight: 600;
+}
+
+.new-mdp input{
+  background-color: #23C4B3;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100px;
+  text-align: center;
+}
+
+.new-mdp input:hover{
+  cursor: pointer;
+}
+
+/*
+  Gestion des graphiques
+*/
+
+.graph-stat{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.graph-restant{
+  padding-top: 30px;
+  width: 400px;
+}
+
+.graph-acquis{
+  padding-top: 30px;
+  width: 400px;
+}
